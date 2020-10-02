@@ -40,6 +40,11 @@ body {
   color: var(--background) !important;
 }
 
+.version-bullet {
+  background-color: var(--bullets) !important;
+  color           : var(--body-text) !important;
+}
+
 /* Block reference */
 
 .block-ref-count-button {
@@ -86,6 +91,10 @@ span[style*="color: red"] {
 
 .bp3-icon.bp3-icon-filter[style*="color: rgb(168, 42, 42);"] {
   color: var(--filter-icon) !important;
+}
+
+.bp3-input.bp3-minimal.search-input {
+  color: var(--body-text) !important;
 }
 
 div[style*="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.5;"] {
