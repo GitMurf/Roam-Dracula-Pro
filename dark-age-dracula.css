@@ -31,7 +31,7 @@
   --bullets                 : #7C6EAD;
   --closed-bullets          : #313340;
   --references              : #7C6EAD;
-  --block-reference-text    : #FF9580;
+  --block-reference-text    : #FFFF80;
   --namespaces              : #81FFEA;
   --all-pages-mentions      : #FF9580;
   --cursor                  : #F2F2F2;
@@ -58,4 +58,7 @@
   --kanban-column-background: #2A2C37;
   --kanban-card-background  : #1B1A23;
   --kanban-text-hover       : #81FFEA;
+  /* SPM ADDED */
+  --dayOfWeek-font-color: #d3d3d3ab;
+  --dayOfWeek-font-size: 14px;
 }
