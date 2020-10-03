@@ -1150,8 +1150,11 @@ div::-webkit-scrollbar-thumb:hover {
 /*---------------------------------------------------------------------------*/
 
 /* SPM ADDED */
-#roam-title-day-banner /* For Roam42 day of week banner - 10-3-20 */
-{
+#roam-title-day-banner { /* For Roam42 day of week banner - 10-3-20 */
     color: var(--dayOfWeek-font-color) !important;
     font-size: var(--dayOfWeek-font-size) !important;
+}
+
+.block-highlight-blue { /* Color of highlight when selecting blocks - 10-3-20 */
+  background-color: var(--block-highlight-color) !important;
 }
