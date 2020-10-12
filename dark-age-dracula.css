@@ -1,21 +1,18 @@
 @import url('https://gitmurf.github.io/Roam-Dracula-Pro/better-dark-age.css');
 
-.rm-caret.rm-caret-hidden { /*SPM added 10-11-2020 */
-    opacity: 0 !important;
-}
+/* Block ref and page link search box */
+  .bp3-elevation-3 {
+    width: 600px !important;
+    max-width: 600px !important;
+    position: unset !important; /* This moves the search box back to left in line with the bullets so doesn't overflow when towards right edge of screen */
+  }
 
-.rm-autocomplete-result {
-    word-break: unset;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.roam-center {
-   flex-basis: auto !important;
-   resize: horizontal !important;
-   overflow: auto !important;
-}
+  .rm-autocomplete-result {
+      word-break: unset;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
 
 /* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css?family=Nunito|Fira+Code|Bitter');
