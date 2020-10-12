@@ -31,6 +31,10 @@ body {
   opacity: 1 !important;
 }
 
+.rm-caret-hidden {
+  opacity: 0 !important;
+}
+
 .bp3-icon-standard:hover {
   color: var(--icons-hover) !important;
 }
@@ -101,23 +105,53 @@ div[style*="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.
   opacity: 1 !important;
 }
 
+/* Inline Block References */
+
+.rm-inline-references {
+  background-color: transparent;
+  border          : 1px solid var(--block-reference-text);
+  border-radius   : 6px;
+  padding-top     : 5px;
+  padding-bottom  : 5px;
+  padding-right   : 20px;
+}
+
+.rm-inline-references:before {
+  color  : var(--block-reference-text);
+  content: "Block References";
+}
+
+.rm-block-ref.dont-focus-block {
+  color: var(--block-reference-text);
+}
+
+.rm-zoom-mask {
+  color: var(--page-links);
+}
+
+.rm-zoom-item-content.rm-zoom-collapsed-item {
+  color          : var(--references);
+  text-decoration: underline;
+}
+
 /* BETTERROAM-LIKE STYLE
 Original BetterRoam theme by @linuz90
 Love this theme? Say thanks via Paypal: https://www.paypal.me/linuz90 */
 
 .roam-center {
-  border-left  : 1px solid var(--sidebar-background) !important;
-  border-top   : 1px solid var(--sidebar-background) !important;
-  border-right : 1px solid var(--sidebar-background) !important;
-  border-bottom: 1px solid var(--sidebar-background) !important;
+  border       : 1px solid var(--sidebar-background) !important;
   border-radius: 12px !important;
-  box-shadow   : 0 3px 20px rgba(0, 0, 0, 0.2) !important;
   overflow     : visible !important;
   background   : var(--background) !important;
-  margin-right : 3px !important;
-  margin-left  : 3px !important;
+  margin-right : 6px !important;
+  margin-left  : 6px !important;
   padding-left : 0 !important;
   max-height   : 98% !important;
+}
+
+.roam-article {
+  padding-left: 20px !important;
+  padding-top : 0 !important;
 }
 
 .roam-app,
@@ -143,27 +177,22 @@ Love this theme? Say thanks via Paypal: https://www.paypal.me/linuz90 */
   z-index   : 10;
 }
 
+div[style*="border-bottom: 1px solid rgb(138, 155, 168);"] {
+  border-bottom: 1px solid var(--references) !important;
+}
+
+/* Hide sidebar button visibility */
+.bp3-icon-menu-closed {
+  transition: opacity 0.3s ease !important;
+}
+
 /* Hide sidebar button visibility */
 .bp3-icon-menu-closed {
   transition: opacity 0.3s ease !important;
 }
 
 /* Sidebar dropdown menu */
-.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown .menu-title {
-  color: var(--dropdown-menu-text) !important;
-}
-
-.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown .setting {
-  background: transparent !important;
-}
-/* Hide sidebar button visibility */
-.bp3-icon-menu-closed {
-  transition: opacity 0.3s ease !important;
-}
-
-/* Sidebar dropdown menu */
-.rm-autocomplete-result,
-.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown .menu-title {
+.rm-autocomplete-result {
   color: var(--dropdown-menu-text) !important;
 }
 
@@ -201,7 +230,6 @@ Love this theme? Say thanks via Paypal: https://www.paypal.me/linuz90 */
 /* FONTS. TEXT STYLING, AND COLORS */
 
 /* Global Font */
-.level2,
 body,
 div,
 textarea {
@@ -283,6 +311,7 @@ h3 {
 }
 
 /* Page title & Daily date color */
+.level2,
 .rm-title-display {
   color      : var(--page-heading) !important;
   font-family: var(--header-font) !important;
@@ -436,6 +465,8 @@ strong[tabindex="-1"] {
 .bp3-button:not([class*="bp3-intent-"]) {
   color      : var(--body-text) !important;
   font-family: var(--secondary-font);
+  background : var(--kanban-column-background) !important;
+  font-size  : 90% !important;
   transition : color 0.3s ease;
 }
 
@@ -552,17 +583,35 @@ span[style*="color: rgb(14, 90, 138);"] {
 
 /* Calendar */
 
-.DayPicker-Weekday,
+.bp3-datepicker {
+  background-color: var(--sidebar-background);
+}
+
+.DayPicker-Day:hover {
+  background: var(--references) !important;
+}
+
+.bp3-divider {
+  border-color: var(--references) !important;
+}
+
+.bp3-datepicker-caption {
+  background-color: var(--body-text) !important;
+  border-radius   : 5px !important;
+}
+
 .bp3-datepicker-day-wrapper {
-  color: var(--background);
+  color: var(--body-text) !important;
 }
 
 .bp3-datepicker .DayPicker-Day.DayPicker-Day--outside {
   opacity: 0.4;
 }
 
-.roam-block-container {
-  max-width: 100%;
+.bp3-icon-chevron-left,
+.bp3-icon-chevron-right,
+.bp3-icon-double-caret-vertical {
+  color: var(--icons) !important;
 }
 
 /* Kanban Card Styling */
@@ -666,7 +715,11 @@ div[style*="background: rgb(255, 243, 205);"] {
 
 /* Daily Notes Divider */
 .roam-log-page {
-  border-top: 1px solid var(--references) !important;
+  border-bottom : 1.5px dashed var(--bold-color) !important;
+  border-top    : 0 !important;
+  padding       : 0 !important;
+  margin        : 0 !important;
+  padding-bottom: 30px !important;
 }
 
 /* Path text color for Linked References */
@@ -742,6 +795,10 @@ div[style*="background: rgb(255, 243, 205);"] {
 
 .bp3-icon.bp3-icon-chevron-up.sort-button.focused {
   color: var(--icons-hover);
+}
+
+.rm-zoom-chevron {
+  color: var(--icons) !important;
 }
 
 /* Title Header */
@@ -882,6 +939,13 @@ button[style*="padding: 4px 8px;"] {
   box-shadow: none;
 }
 
+/* Reposition left sidebar menu button */
+#app .roam-app .roam-main .roam-topbar > div > span.bp3-button.bp3-minimal.bp3-icon-menu-open.bp3-small,
+#app .roam-app .roam-main .roam-topbar > div > span.bp3-button.bp3-minimal.bp3-icon-menu.pointer.bp3-small {
+  position: relative !important;
+  left    : -30px !important;
+}
+
 /*---------------------------------------------------------------------------*/
 /* WIDTH FIXES */
 
@@ -928,6 +992,7 @@ div[style*="padding-right: calc(0.5 * (100% - 800px)); padding-left: calc(0.5 * 
   background-color: #282a36 !important;
   color           : #f8f8f2 !important;
   border          : none;
+  border-radius   : 6px;
 }
 
 .cm-s-default .CodeMirror-gutters {
@@ -1033,6 +1098,10 @@ div[style*="padding-right: calc(0.5 * (100% - 800px)); padding-left: calc(0.5 * 
   color          : white !important;
 }
 
+.CodeMirror * {
+  font-family: var(--secondary-font);
+}
+
 /*---------------------------------------------------------------------------*/
 /* LEGACY DARK AGE STUFF
 (Not sure what this stuff does, leaving in case it breaks something) */
@@ -1136,6 +1205,31 @@ div::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.4);
   border          : 5px var(--icons-hover) solid;
 }
+
+/* Hide mobile bar on iPad */
+@media (min-device-width : 1024px) {
+  #rm-mobile-bar {
+    opacity: 0 !important;
+  }
+}
+
+/* Compact borderless references and queries */
+
+.rm-reference-item {
+  padding: 0 !important;
+  margin : 0 !important;
+  border : 0 !important;
+}
+
+.rm-ref-page-view {
+  padding-bottom: 10px !important;
+}
+
+/* Compact block spacing */
+.block-border-left {
+  padding: 0 !important;
+}
+
 /*---------------------------------------------------------------------------*/
 /* MERMAID Customization */
 
@@ -1146,6 +1240,175 @@ div::-webkit-scrollbar-thumb:hover {
 
 .bp3-card {
   background: var(--background) !important;
+}
+/*---------------------------------------------------------------------------*/
+/* MISCELLANEOUS MENUS, BUTTONS, POP-UPS */
+
+.bp3-dialog-container.bp3-overlay-content.bp3-overlay-appear-done.bp3-overlay-enter-done {
+  color: var(--body-text) !important;
+}
+
+.bp3-button.bp3-intent-danger {
+  color     : var(--body-text) !important;
+  background: #E91E63 !important;
+}
+
+.bp3-dialog-container.bp3-overlay-content.bp3-overlay-enter-done {
+  color: var(--body-text) !important;
+}
+
+/*---------------------------------------------------------------------------*/
+/* HELP BUTTON / POPUP */
+
+.bp3-button.bp3-minimal {
+  background-color: transparent !important;
+  padding         : 0 !important;
+}
+
+#buffer {
+  background: transparent !important;
+  right     : 7px !important;
+  bottom    : 10px !important;
+}
+
+#buffer .bp3-popover-target > .bp3-button {
+  background: rgba(0, 0, 0, 0.1);
+  height    : 30px;
+  width     : 30px;
+}
+
+#buffer > div {
+  z-index      : 99999 !important;
+  background   : rgb(var(--kanban-column-background), 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 10px;
+  padding      : 2px 8px 8px;
+  box-shadow   : 0 8px 14px rgba(0, 0, 0, 0.6);
+}
+
+#buffer > div .bp3-button::before {
+  color: #FFFFFF !important;
+
+}
+
+#buffer .help-title {
+  color: var(--page-links) !important;
+}
+
+#buffer .help-sub-title {
+  color: var(--italics-color) !important;
+}
+
+#buffer span {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#buffer a {
+  text-decoration: underline;
+  color          : var(--external-links) !important;
+}
+
+#buffer a:hover {
+  opacity: 0.5;
+}
+
+/*---------------------------------------------------------------------------*/
+/* GRAPH VIEW */
+
+/* you can't actually style the graph view because it uses canvas elements, but we *can* apply CSS filters to it to slightly change the appearance */
+canvas[data-id="layer2-node"] {
+  /*filter: invert(1) drop-shadow(0px 3px 4px rgba(0,0,0,0.1));*/
+  filter: invert(1) hue-rotate(110deg) saturate(2.5);
+  opacity   : 0.3;
+  transition: opacity 0.2s ease-out;
+}
+
+*[id*="cyto-wrapper"]:hover canvas[data-id="layer2-node"] {
+  opacity: 1;
+}
+/*---------------------------------------------------------------------------*/
+/* BETTER SIDEBAR */
+
+.sidebar-content {
+  background-color: var(--background) !important;
+  border-radius   : 12px !important;
+  margin-left     : 5px !important;
+  margin-right    : 8px !important;
+  padding         : 5px !important;
+}
+
+#roam-right-sidebar-content {
+  max-height: 98% !important;
+}
+
+#right-sidebar div[style*="padding: 8px;"] {
+  display: none;
+}
+
+#roam-right-sidebar-content > div > div:nth-child(n) > div {
+  padding-top   : 14px !important;
+  padding-bottom: 14px !important;
+}
+
+/*---------------------------------------------------------------------------*/
+/* DB DROPDOWN SELECTOR */
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown .menu-title {
+  color: var(--dropdown-menu-text) !important;
+}
+
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown .setting {
+  background: transparent !important;
+}
+
+.bp3-icon.bp3-icon-cog.icon.settings {
+  color         : var(--icons) !important;
+  padding-bottom: 3px !important;
+}
+
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row .bp3-menu-item.setting > a,
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row a:nth-child(n) > li {
+  color  : var(--body-text) !important;
+  opacity: 1 !important;
+}
+
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row .bp3-menu-item.setting > a:hover,
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row > div > div > span > div > div > div > div > ul > li:nth-child(n):hover,
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row a:nth-child(n) > li:hover {
+  background-color: var(--dropdown-menu-highlight) !important;
+}
+
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row > div > div > span > div > div > div > div > ul > div > li:nth-child(n) {
+  color: var(--page-links) !important;
+}
+
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row > div > div > span > div > div > div > div > ul > li:nth-child(n) {
+  color: var(--bold-color) !important;
+}
+
+#app .roam-app .roam-sidebar-container.noselect .flex-h-box.top-row > div > div > span > div > div > div > div > ul {
+  opacity      : 1 !important;
+  border-radius: 8px !important;
+}
+
+.roam-body .roam-app .roam-sidebar-container .rm-graph-dropdown {
+  border-radius: 10px;
+  box-shadow   : 0 1px 5px rgba(0, 0, 0, 0.6);
+}
+/*---------------------------------------------------------------------------*/
+/* UPDATE TOAST */
+body > div:nth-child(10) > div > div > span > div > span > strong {
+  color: var(--body-text) !important;
+}
+
+body > div:nth-child(10) > div > div {
+  background-color: rgb(var(--kanban-column-background), 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  border-radius   : 5px;
+  box-shadow      : 0 1px 5px rgba(0, 0, 0, 1);
+}
+
+body > div:nth-child(10) > div > div > div > button > span > svg > path {
+  color: var(--body-text) !important;
 }
 /*---------------------------------------------------------------------------*/
 
