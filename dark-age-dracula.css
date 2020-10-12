@@ -1,5 +1,22 @@
 @import url('https://gitmurf.github.io/Roam-Dracula-Pro/better-dark-age.css');
 
+.rm-caret.rm-caret-hidden { /*SPM added 10-11-2020 */
+    opacity: 0 !important;
+}
+
+.rm-autocomplete-result {
+    word-break: unset;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.roam-center {
+   flex-basis: auto !important;
+   resize: horizontal !important;
+   overflow: auto !important;
+}
+
 /* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css?family=Nunito|Fira+Code|Bitter');
 
@@ -29,7 +46,7 @@
   --daily-heading           : #9580FF;
   --headings                : #F2F2F2;
   --bullets                 : #7C6EAD;
-  --closed-bullets          : #313340;
+  --closed-bullets          : #7c6eada1; /*#313340 */
   --references              : #7C6EAD;
   --block-reference-text    : #FFFF80;
   --namespaces              : #81FFEA;
