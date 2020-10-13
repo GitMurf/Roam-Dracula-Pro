@@ -1464,4 +1464,5 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 }
 ::selection {
   background-color: var(--selection-highlight-color) !important;
+  color: var(--selection-color) !important;
 }
