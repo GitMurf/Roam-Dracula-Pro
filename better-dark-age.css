@@ -1441,6 +1441,7 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 }
 /*---------------------------------------------------------------------------*/
 /* FIX SELECTION COLOR AND BLOCK-HIGLIGHTS */
+/* SPM commenting out on 10-13-20 since have code handled myself below
 .block-highlight-blue {
   background-color: var(--closed-bullets) !important;
 
@@ -1449,6 +1450,7 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 ::selection {
   background-color: #A19DA9 !important;
 }
+*/
 /*---------------------------------------------------------------------------*/
 
 /* SPM ADDED */
@@ -1459,4 +1461,7 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 
 .block-highlight-blue { /* Color of highlight when selecting blocks - 10-3-20 */
   background-color: var(--block-highlight-color) !important;
+}
+::selection {
+  background-color: var(--selection-highlight-color) !important;
 }

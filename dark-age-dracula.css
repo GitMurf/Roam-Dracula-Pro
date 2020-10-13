@@ -76,4 +76,5 @@
   --dayOfWeek-font-color    : #d3d3d3ab;
   --dayOfWeek-font-size     : 14px;
   --block-highlight-color   : rgba(211,211,211,0.15);
+  --selection-highlight-color: white;
 }
