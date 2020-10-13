@@ -49,6 +49,11 @@ body {
   color           : var(--body-text) !important;
 }
 
+.block-border-left {
+  border-color: var(--references) !important;
+  margin-left : 6px !important;
+}
+
 /* Block reference */
 
 .block-ref-count-button {
@@ -170,6 +175,16 @@ Love this theme? Say thanks via Paypal: https://www.paypal.me/linuz90 */
 
 .roam-topbar {
   border-bottom: 0;
+  padding-right: 3px !important;
+}
+
+.roam-topbar > div > div:nth-child(n) {
+  margin: 0 !important;
+}
+
+.roam-topbar div[style*="flex: 0 0 4px;"],
+.roam-topbar div[style*="flex: 0 0 3px"] {
+  flex: 0 0 0 !important;
 }
 
 .roam-topbar.bp3-popover-wrapper {
@@ -733,11 +748,15 @@ div[style*="background: rgb(255, 243, 205);"] {
 
 /* Daily Notes Divider */
 .roam-log-page {
-  border-bottom : 1.5px dashed var(--hashtags) !important;
+  border-bottom : 1.5px solid var(--references) !important;
   border-top    : 0 !important;
   padding       : 0 !important;
   margin        : 0 !important;
   padding-bottom: 30px !important;
+}
+
+.roam-log-page.roam-log-preview {
+  color: var(--references) !important;
 }
 
 /* Path text color for Linked References */
@@ -1298,8 +1317,8 @@ div::-webkit-scrollbar-thumb:hover {
 #buffer > div {
   z-index      : 99999 !important;
   background   : rgb(var(--kanban-column-background), 0.7) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(30px);
   border-radius: 10px;
   padding      : 2px 8px 8px;
   box-shadow   : 0 8px 14px rgba(0, 0, 0, 0.6);
@@ -1351,17 +1370,13 @@ canvas[data-id="layer2-node"] {
 .sidebar-content {
   background-color: var(--background) !important;
   border-radius   : 12px !important;
-  margin-left     : 5px !important;
-  margin-right    : 8px !important;
+  margin-left     : 4px !important;
+  margin-right    : 6px !important;
   padding         : 5px !important;
 }
 
 #roam-right-sidebar-content {
   max-height: 98% !important;
-}
-
-#right-sidebar div[style*="padding: 8px;"] {
-  display: none;
 }
 
 #roam-right-sidebar-content > div > div:nth-child(n) > div {
@@ -1426,11 +1441,10 @@ body > div:nth-child(10) > div > div > span > div > span > strong {
   color: var(--body-text) !important;
 }
 
-body > div.bp3-portal > div > div,
 body > div:nth-child(10) > div > div {
   background-color: rgb(var(--kanban-column-background), 0.7) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px);
   border-radius   : 5px;
   box-shadow      : 0 1px 5px rgba(0, 0, 0, 1);
 }
