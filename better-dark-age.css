@@ -57,6 +57,7 @@ body {
 .rm-block-input {
   color           : var(--body-text) !important;
   background-color: var(--sidebar-background);
+  box-shadow      : 0 0 2px 1px var(--references);
   padding-left    : 6px;
   border-radius   : 5px;
 }
@@ -66,22 +67,20 @@ body {
 .block-ref-count-button {
   color        : var(--icons) !important;
   background   : transparent !important;
-  border       : 1px solid var(--icons) !important;
-  border-color : var(--icons) !important;
-  border-radius: 100px !important;
+  border-bottom: 1.5px solid var(--block-reference-text) !important;
   z-index      : 1000 !important;
   transition   : color 0.3s ease, border 0.3s ease !important;
   opacity      : 1 !important;
-  font-family  : var(--secondary-font) !important;
-  margin-right : 10px;
+  font-family  : var(--header-font) !important;
+  margin-right : 6px;
   margin-top   : 2px;
+  border-radius: 0;
 }
 
 .block-ref-count-button:hover {
   color        : var(--icons-hover) !important;
   background   : transparent !important;
-  border       : 1px solid var(--icons-hover) !important;
-  border-radius: 100px !important;
+  border-bottom: 1.5px solid var(--block-reference-text) !important;
   z-index      : 1000 !important;
   transition   : color 0.3s ease, border 0.3s ease !important;
 }
@@ -121,8 +120,9 @@ div[style*="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.
 
 .rm-inline-references {
   background-color: transparent;
-  border          : 1px solid var(--block-reference-text);
-  border-radius   : 6px;
+  border          : transparent;
+  box-shadow      : 0 0 3px 1px var(--references);
+  border-radius   : 5px;
   padding-top     : 5px;
   padding-bottom  : 5px;
   padding-right   : 20px;
@@ -449,11 +449,8 @@ strong[tabindex="-1"] {
 
 /* Block embed */
 .rm-embed-container {
-  border       : var(--references) solid;
-  border-radius: 10px;
-  border-width : 1.5px;
-  padding      : 5px 5px 5px 0;
-  margin-left  : -2px !important;
+  padding    : 0 !important;
+  margin-left: -20px !important;
 }
 
 .rm-embed-container:hover > .rm-embed-edit {
@@ -461,12 +458,16 @@ strong[tabindex="-1"] {
 }
 
 .rm-embed-edit {
-  margin-right: 5px;
-  z-index     : 1000;
+  margin : 0 !important;
+  z-index: 1000;
 }
 
 .rm-embed-inner-block-hide {
-  margin-left: 0 !important;
+  margin-left  : 0 !important;
+  background   : var(--kanban-column-background) !important;
+  padding      : 4px !important;
+  margin-top   : 4px !important;
+  margin-bottom: 4px !important;
 }
 
 /* Namespace text color [[roam/css]] when using CTRL+C CTRL+L || CMD+C CMD+L */
@@ -509,19 +510,19 @@ strong[tabindex="-1"] {
 
 /* Query */
 .rm-query-title {
-  background : inherit !important;
-  color      : var(--references) !important;
-  font-weight: 600;
+  background    : var(--sidebar-background) !important;
+  color         : var(--block-reference-text) !important;
+  border-bottom : 1px solid var(--references) !important;
+  border-radius : 5px;
+  padding-top   : 4px !important;
+  padding-bottom: 4px !important;
 }
 
 .rm-query {
-  border        : var(--references) solid;
-  border-radius : 10px;
-  border-width  : 1.5px;
-  padding-top   : 5px;
-  padding-bottom: 5px;
-  padding-right : 10px;
-  margin-left   : 0;
+  box-shadow   : 0 0 2px 1px var(--references);
+  border-radius: 5px;
+  border       : transparent;
+  padding      : 0;
 }
 
 /* Alias */
@@ -786,6 +787,11 @@ div[style*="background: rgb(255, 243, 205);"] {
   opacity: 0.5;
 }
 
+.bp3-input.bp3-active,
+.bp3-input:focus {
+  box-shadow: 0 0 4px 1px var(--references) !important;
+}
+
 /* Search box input text color */
 .bp3-input-group input {
   color: var(--search-bar-text) !important;
@@ -799,6 +805,15 @@ div[style*="background: rgb(255, 243, 205);"] {
 /* New page text color */
 .rm-new-page {
   color: var(--dropdown-newpage) !important;
+}
+
+/* Ctrl-Shift-9 menu */
+.bp3-dialog-container.bp3-overlay-content.bp3-overlay-enter-done > div > div > div > div:nth-child(n) > input {
+  background-color: var(--background) !important;
+  color           : var(--body-text) !important;
+  margin-top      : 5px !important;
+  padding         : 5px !important;
+  border-radius   : 10px !important;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -905,6 +920,17 @@ div[style*="background: rgb(255, 243, 205);"] {
 .bp3-popover-content {
   background-color: var(--dropdown-menu-background) !important;
   color           : var(--page-links) !important;
+}
+
+.bp3-menu {
+  border-radius: 10px;
+  padding      : 2px 8px 8px;
+  box-shadow   : 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.bp3-popover-content {
+  box-shadow   : 0 2px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 10px !important;
 }
 
 .bp3-elevation-3 .dont-unfocus-block:hover,
@@ -1322,7 +1348,6 @@ div::-webkit-scrollbar-thumb:hover {
 
 #buffer > div {
   z-index      : 99999 !important;
-  background   : rgb(var(--kanban-column-background), 0.7) !important;
   backdrop-filter: blur(30px) !important;
   -webkit-backdrop-filter: blur(30px);
   border-radius: 10px;
@@ -1449,24 +1474,33 @@ canvas[data-id="layer2-node"] {
   box-shadow   : 0 1px 5px rgba(0, 0, 0, 0.6);
 }
 /*---------------------------------------------------------------------------*/
-/* UPDATE TOAST */
+/* UPDATE ALERTS AND VARIOUS SPECIAL MENUS */
 body > div.bp3-portal > div > div > span > div > span > strong,
 body > div:nth-child(10) > div > div > span > div > span > strong {
   color: var(--body-text) !important;
 }
 
 body > div:nth-child(10) > div > div {
-  background-color: rgb(var(--kanban-column-background), 0.7) !important;
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(5px);
-  border-radius   : 5px;
-  box-shadow      : 0 1px 5px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  box-shadow   : 0 1px 5px rgba(0, 0, 0, 1);
 }
 
 body > div.bp3-portal > div > div > div > button > span > svg > path,
 body > div:nth-child(10) > div > div > div > button > span > svg > path {
   color: var(--body-text) !important;
 }
+
+/* Share menu */
+.flex-h-box.permission-change-container > div:nth-child(n) > div > textarea {
+  background-color: var(--background) !important;
+  padding         : 5px !important;
+  border          : transparent;
+  border-radius   : 5px;
+  margin-top      : 10px;
+}
+
 /*---------------------------------------------------------------------------*/
 /* FIX SELECTION COLOR AND BLOCK-HIGLIGHTS */
 /* SPM commenting out on 10-13-20 since have code handled myself below
@@ -1476,7 +1510,7 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 }
 
 ::selection {
-  background-color: #A19DA9 !important;
+  background-color: #BEB9C8 !important;
 }
 */
 /*---------------------------------------------------------------------------*/
