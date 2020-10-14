@@ -90,14 +90,20 @@ span[style*="color: red"] {
     padding-left: 5px !important;
 }
 
+.checkmark {
+  border-radius: 50% !important;
+}
+
 /* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css?family=Nunito|Fira+Code|Bitter');
 
 :root {
   /* FONTS */
-  --global-font             : 'Nunito', sans-serif;
-  --secondary-font          : 'Fira Code', monospace;
+  --global-font             : 'Nunito', sans-serif; /* 'Nunito', sans-serif; is what Abhay prefers*/
+  --global-font             : 'Inter', sans-serif; /* This is supposedly the Roam default font... looks nice on Dark Theme */
+  --secondary-font          : 'Fira Code', monospace; /* I thought this wasn't too bad as a monospace font*/
   --header-font             : 'Bitter', serif;
+  --header-font             : 'Fira Code', monospace;
   /* WIDTH FIXES - default 568px,1032px - increase to increase WIDTH */
   --reduce-padding-right    : 3400px;
   --reduce-padding-left     : 3400px;
