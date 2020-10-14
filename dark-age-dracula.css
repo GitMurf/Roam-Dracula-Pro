@@ -14,6 +14,82 @@
       text-overflow: ellipsis;
   }
 
+/* Highlight the bullet results from page link refs to standout from parent bullets */
+div.rm-reference-item .roam-block-container.block-bullet-view {
+  /*background-color: rgba(211,211,211,0.08) !important;*/
+  font-size: 16px !important;
+  /*font-weight: bold !important;*/
+  color: yellow !important;
+}
+
+div.rm-reference-item .roam-block-container.block-bullet-view .controls .simple-bullet-outer.cursor-pointer {
+  /*margin-top: 5px !important;*/
+}
+
+div.rm-reference-item div.rm-zoom.zoom-mentions-view {
+  /* font-size: 11px !important; */
+  /* margin-left: -15px !important; */
+}
+
+div.rm-reference-item div.rm-zoom.zoom-mentions-view .rm-zoom-item-content span {
+  color: #ffffff54 !important;
+}
+
+div.rm-reference-item div.rm-zoom.zoom-mentions-view .rm-zoom-item-content span a {
+  color: #8aff8091 !important;
+}
+
+div.rm-reference-item div.rm-zoom.zoom-mentions-view .rm-page-ref.rm-page-ref-tag {
+  color: #1aa3ac91 !important;
+}
+
+div.rm-reference-item div.rm-zoom.zoom-mentions-view .rm-page-ref.rm-page-ref-link-color {
+  color: #9580ff94 !important;
+}
+
+/* Hide right sidebar close button */
+div#right-sidebar > div.flex-h-box {
+  display: none !important;
+}
+
+/* Roam42 button to close to right edge of page */
+.roam-topbar {
+    padding-right: 20px !important;
+}
+/* FIlter button was kind of high and to the left */
+.roam-topbar .bp3-icon-filter {
+    margin-top: 4px !important;
+    margin-left: -3px !important;
+}
+
+input::selection {
+  color: black !important;
+}
+
+/* Padding is set to 6, so this offsets so doesn't shift text when you click into block */
+.rm-block-input {
+    margin-left: -6px;
+}
+
+.rm-block-ref:hover {
+    background-color: unset;
+    border-bottom: unset;
+}
+
+.rm-block-ref, .roam-block .rm-block-ref,
+span[style*="color: red"] {
+  	color: white !important;
+    border-bottom: none !important;
+    border-right-color: #9580ff !important;
+    border-right-width: 1px !important;
+    border-right-style: groove;
+    padding-right: 5px !important;
+    border-left-color: #9580ff !important;
+    border-left-width: 1px !important;
+    border-left-style: groove;
+    padding-left: 5px !important;
+}
+
 /* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css?family=Nunito|Fira+Code|Bitter');
 
