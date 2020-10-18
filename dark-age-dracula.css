@@ -95,11 +95,12 @@ span[style*="color: red"] {
 }
 
 /* IMPORT FONTS */
-@import url('https://fonts.googleapis.com/css?family=Nunito|Fira+Code|Bitter');
+@import url('https://fonts.googleapis.com/css?family=Commissioner|Fira+Code|Bitter');
 
 :root {
   /* FONTS */
   --global-font             : 'Nunito', sans-serif; /* 'Nunito', sans-serif; is what Abhay prefers*/
+  --global-font             : 'Commissioner', sans-serif; /* Abhay changed to this around oct 18th */
   --global-font             : 'Inter', sans-serif; /* This is supposedly the Roam default font... looks nice on Dark Theme */
   --secondary-font          : 'Fira Code', monospace; /* I thought this wasn't too bad as a monospace font*/
   --header-font             : 'Bitter', serif;
@@ -111,7 +112,7 @@ span[style*="color: red"] {
   --page-links              : #9580FF;
   --attributes-color        : #FFFF80;
   --external-links          : #8AFF80;
-  --links-hover             : #F2F2F2;
+  --links-hover             : #92FFFF;
   --hashtags                : #FE7FBF;
   --body-text               : #F2F2F2;
   --italics-color           : #92FFFF;
@@ -140,7 +141,7 @@ span[style*="color: red"] {
   --h1-font-size            : 2em;
   --h2-font-size            : 1.6em;
   --h3-font-size            : 1.2em;
-  --sidebar-h1-size         : 2em;
+  --sidebar-h1-size         : 2.2em;
   /* DROPDOWN MENU */
   --dropdown-menu-background: #2B2640;
   --dropdown-menu-highlight : #1B1A23;
