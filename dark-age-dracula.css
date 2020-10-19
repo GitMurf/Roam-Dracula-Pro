@@ -112,6 +112,20 @@ div.roam-table span[style*="position: absolute; opacity: 0.1; background-color: 
   }
 */
 
+.rm-find-or-create-wrapper:focus-within {
+  flex: 0 1 80% !important;
+}
+.bp3-overlay-open ul.bp3-menu .rm-menu-item li > span {
+  max-height: 42px !important;
+  word-break: break-word !important;
+  overflow: hidden !important;
+  display: inline-block !important;
+}
+
+.bp3-overlay-open ul.bp3-menu .rm-menu-item li {
+  list-style-type: none !important;
+}
+
 /* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css?family=Inter|Nunito|Commissioner|Fira+Code|Bitter');
 
