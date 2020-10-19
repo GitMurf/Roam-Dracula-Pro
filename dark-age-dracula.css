@@ -1,11 +1,12 @@
 @import url('https://gitmurf.github.io/Roam-Dracula-Pro/better-dark-age.css');
 
 /* Block ref and page link search box */
-  .bp3-elevation-3 {
-    width: 600px !important;
-    max-width: 600px !important;
-    position: unset !important; /* This moves the search box back to left in line with the bullets so doesn't overflow when towards right edge of screen */
-  }
+.bp3-elevation-3 {
+  max-height: 500px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  left: -6px !important; /* This moves the search box back to left in line with the bullets so doesn't overflow when towards right edge of screen */
+}
 
   .rm-autocomplete-result {
       word-break: unset;
@@ -20,15 +21,6 @@ div.rm-reference-item .roam-block-container.block-bullet-view {
   font-size: 16px !important;
   /*font-weight: bold !important;*/
   color: yellow !important;
-}
-
-div.rm-reference-item .roam-block-container.block-bullet-view .controls .simple-bullet-outer.cursor-pointer {
-  /*margin-top: 5px !important;*/
-}
-
-div.rm-reference-item div.rm-zoom.zoom-mentions-view {
-  /* font-size: 11px !important; */
-  /* margin-left: -15px !important; */
 }
 
 div.rm-reference-item div.rm-zoom.zoom-mentions-view .rm-zoom-item-content span {
@@ -69,6 +61,7 @@ input::selection {
 /* Padding is set to 6, so this offsets so doesn't shift text when you click into block */
 .rm-block-input {
     margin-left: -6px;
+  	background-color: #2b26409c;
 }
 
 .rm-block-ref:hover {
@@ -76,6 +69,7 @@ input::selection {
     border-bottom: unset;
 }
 
+/* Block ref format to be more subtle with just side borders */
 .rm-block-ref, .roam-block .rm-block-ref,
 span[style*="color: red"] {
   	color: white !important;
@@ -90,12 +84,36 @@ span[style*="color: red"] {
     padding-left: 5px !important;
 }
 
+/* Rounded TODO checkboxes */
 .checkmark {
-  border-radius: 50% !important;
+	border-radius: 50% !important;
+}
+.check-container {
+vertical-align: top !important;
+top: 5.5px !important;
+margin-bottom: 0px !important;
+padding-bottom: 0px !important;
+}
+div.roam-table label.check-container {
+  top: 2px !important;
 }
 
+/* get rid of the weird SPAN background color in attribute table cells */
+div.roam-table span[style*="position: absolute; opacity: 0.1; background-color: rgb(14, 90, 138); top: 0px; bottom: 0px; right: 0px; left: 0px;"] {
+  background-color: unset !important;
+}
+
+/* From railscast for allowing images to resive full width
+  .hoverparent[style*="width: 720px;"] {
+    width: 90% !important;
+  }
+  .react-resizable[style^='width: 720px;'] {
+    width: 100% !important;
+  }
+*/
+
 /* IMPORT FONTS */
-@import url('https://fonts.googleapis.com/css?family=Commissioner|Fira+Code|Bitter');
+@import url('https://fonts.googleapis.com/css?family=Inter|Nunito|Commissioner|Fira+Code|Bitter');
 
 :root {
   /* FONTS */
@@ -112,7 +130,7 @@ span[style*="color: red"] {
   --page-links              : #9580FF;
   --attributes-color        : #FFFF80;
   --external-links          : #8AFF80;
-  --links-hover             : #92FFFF;
+  --links-hover             : #F2F2F2;
   --hashtags                : #FE7FBF;
   --body-text               : #F2F2F2;
   --italics-color           : #92FFFF;
