@@ -1619,20 +1619,20 @@ span[style*="background-color: rgb(14, 90, 138);"] {
 
 .rm-block-ref, .roam-block .rm-block-ref,
 span[style*="color: red"] {
-  color               : var(--body-text) !important;  
+  color               : var(--block-reference-text) !important;
   border-bottom       : none !important;
   border-right-color  : #9580ff !important;
   border-right-width  : 1px !important;
-  border-right-style  : groove;
+  border-right-style  : groove !important;
   padding-right       : 5px !important;
   border-left-color   : #9580ff !important;
   border-left-width   : 1px !important;
-  border-left-style   : groove;
+  border-left-style   : groove !important;
   padding-left        : 5px !important;
 }
 .rm-block-ref:hover {
-  background-color: unset;
-  border-bottom: unset;
+  background-color: var(--block-ref-hover-bg) !important;
+  border-bottom: unset !important;
 }
 
 /* Rounded TODO checkboxes */
