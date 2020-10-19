@@ -89,33 +89,6 @@ body {
   transition   : color 0.3s ease, border 0.3s ease !important;
 }
 
-.rm-block-ref dont-focus-block {
-  font-size: var(--main-font-size) !important;
-}
-
-.rm-block-ref,
-.roam-block .rm-block-ref,
-span[style*="color: red"] {
-  color             : var(--body-text) !important;
-  border-bottom     : none !important;
-  border-right-color: var(--references) !important;
-  border-right-width: 3px !important;
-  border-right-style: solid;
-  padding-right     : 2px !important;
-  border-left-color : var(--references) !important;
-  border-left-width : 3px !important;
-  border-left-style : solid;
-  padding-left      : 2px !important;
-  border-radius     : 5px !important;
-  padding-top       : 2px !important;
-  padding-bottom    : 4px !important;
-}
-
-.rm-block-ref:hover {
-  background-color: var(--kanban-column-background) !important;
-  transition      : color 0.3s ease;
-}
-
 .bp3-icon.bp3-icon-filter[style*="color: rgb(168, 42, 42);"] {
   color: var(--filter-icon) !important;
 }
@@ -144,10 +117,6 @@ div[style*="position: absolute; z-index: 1000; top: 0px; right: 0px; opacity: 0.
   color      : var(--block-reference-text);
   content    : "Block References";
   font-weight: 500 !important;
-}
-
-.rm-block-ref.dont-focus-block {
-  color: var(--block-reference-text);
 }
 
 .rm-zoom-mask {
@@ -1547,12 +1516,6 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 
 /* ATTRIBUTE TABLE */
 
-.roam-table .rm-block-ref,
-.roam-table .rm-block-ref:hover {
-  border-color: var(--background) !important;
-  background  : transparent !important;
-}
-
 span[style*="background-color: rgb(14, 90, 138);"] {
   background-color: unset !important;
   border-radius   : 5px;
@@ -1610,18 +1573,62 @@ span[style*="background-color: rgb(14, 90, 138);"] {
 }
 
 /* Block ref format to be more subtle with just side borders */
+  /* Here is all of Abhay code related to block-ref */
+    /*
+    .rm-block-ref dont-focus-block {
+      font-size: var(--main-font-size) !important;
+    }
+    */
+    /*
+    .rm-block-ref,
+    .roam-block .rm-block-ref,
+    span[style*="color: red"] {
+      color             : var(--body-text) !important;
+      border-bottom     : none !important;
+      border-right-color: var(--references) !important;
+      border-right-width: 3px !important;
+      border-right-style: solid;
+      padding-right     : 2px !important;
+      border-left-color : var(--references) !important;
+      border-left-width : 3px !important;
+      border-left-style : solid;
+      padding-left      : 2px !important;
+      border-radius     : 5px !important;
+      padding-top       : 2px !important;
+      padding-bottom    : 4px !important;
+    }
+    */
+    /*
+    .rm-block-ref:hover {
+      background-color: var(--kanban-column-background) !important;
+      transition      : color 0.3s ease;
+    }
+    .rm-block-ref.dont-focus-block {
+      color: var(--block-reference-text);
+    }
+    */
+    /* ATTRIBUTE TABLE */
+    /*
+    .roam-table .rm-block-ref,
+    .roam-table .rm-block-ref:hover {
+      border-color: var(--background) !important;
+      background  : transparent !important;
+    }
+    */
+  /* END of abhay code on block refs */
+
 .rm-block-ref, .roam-block .rm-block-ref,
 span[style*="color: red"] {
-  	color: white !important;
-    border-bottom: none !important;
-    border-right-color: #9580ff !important;
-    border-right-width: 1px !important;
-    border-right-style: groove;
-    padding-right: 5px !important;
-    border-left-color: #9580ff !important;
-    border-left-width: 1px !important;
-    border-left-style: groove;
-    padding-left: 5px !important;
+  color               : var(--body-text) !important;  
+  border-bottom       : none !important;
+  border-right-color  : #9580ff !important;
+  border-right-width  : 1px !important;
+  border-right-style  : groove;
+  padding-right       : 5px !important;
+  border-left-color   : #9580ff !important;
+  border-left-width   : 1px !important;
+  border-left-style   : groove;
+  padding-left        : 5px !important;
 }
 .rm-block-ref:hover {
   background-color: unset;
