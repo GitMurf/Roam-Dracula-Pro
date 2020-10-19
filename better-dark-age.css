@@ -675,8 +675,6 @@ g circle {
 }
 
 /* Kanban Card Styling */
-
-,
 .kanban-column-container {
   background-color: var(--kanban-main-background);
   max-width       : 91%;
