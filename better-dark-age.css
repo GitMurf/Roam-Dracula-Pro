@@ -1572,3 +1572,15 @@ span[style*="background-color: rgb(14, 90, 138);"] {
   background-color: var(--selection-highlight-color) !important;
   color: var(--selection-color) !important;
 }
+
+/* SPM Took from Abhay optional.css */
+/* Hide Roam Logo */
+#roam-sidebar-logo {
+  display: none;
+}
+
+/* Hide graph button in top bar */
+.bp3-button.bp3-minimal.bp3-icon-graph.bp3-small {
+  display: none !important;
+}
+/* END from optional.css */
