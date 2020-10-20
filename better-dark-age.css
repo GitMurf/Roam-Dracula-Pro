@@ -1643,8 +1643,17 @@ span[style*="color: red"] {
   padding-left        : 5px !important;
 }
 */
+
+/* Undo the default Roam css on block refs */
+.rm-block-ref {
+  padding: unset;
+  margin: unset;
+  display: unset;
+  border-bottom: unset;
+  cursor: alias;
+}
 /* Limited this down to block refs excluding tables (weird attribute table issue where it adds attribute children blocks as block refs) */
-:not(.roam-table) .rm-block-ref {
+:not(td) > div > .rm-block-ref {
   color               : var(--block-reference-text) !important;
   border-bottom       : none !important;
   border-right-color  : #9580ff !important;
@@ -1656,7 +1665,7 @@ span[style*="color: red"] {
   border-left-style   : groove !important;
   padding-left        : 5px !important;
 }
-:not(.roam-table) .rm-block-ref:hover {
+:not(td) > div > .rm-block-ref:hover {
   background-color: var(--block-ref-hover-bg) !important;
   border-bottom: unset !important;
 }
