@@ -1532,7 +1532,7 @@ span[style*="background-color: rgb(14, 90, 138);"] {
   background-color: var(--block-highlight-color) !important;
 }
 ::selection {
-  background-color: var(--selection-highlight-color) !important;
+  background-color: var(--selection-HL-color) !important;
   color: var(--selection-color) !important;
 }
 
@@ -1671,7 +1671,7 @@ span[style*="color: red"] {
 }
 /** END OF block ref stuff */
 
-/* Rounded TODO checkboxes */
+/* Rounded Todo checkboxes */
 .checkmark {
 	border-radius: 50% !important;
 }
@@ -1706,7 +1706,19 @@ div.roam-table span[style*="position: absolute; opacity: 0.1; background-color: 
   margin-left: -35px;
 }
 
-/* SPM Took from Abhay optional.css */
+/* TABLES */
+
+table {
+  background-color: var(--table-bg)
+}
+table thead {
+  background-color: var(--table-header-bg)
+}
+table tbody {
+  background-color: var(--table-body-bg)
+}
+
+/** SPM Took from Abhay optional.css */
 
 /* Hide Roam Logo */
 #roam-sidebar-logo {
@@ -1718,7 +1730,7 @@ div.roam-table span[style*="position: absolute; opacity: 0.1; background-color: 
   display: none !important;
 }
 
-/* Rainbow indentation */
+/** Rainbow indentation */
 /* 
 Feel free to adjust the colors - this one loops every
 7 colors like the rainbow but you can change that to 
@@ -1793,6 +1805,6 @@ Optional border adjustments:
     border-left-width: 1px !important;
     margin-left: 5px !important;
 }
-/* END of Rainbow */
+/** END of Rainbow */
 
-/* END from Abhay optional.css */
+/** END from Abhay optional.css */
