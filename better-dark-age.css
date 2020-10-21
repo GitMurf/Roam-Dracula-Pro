@@ -1572,8 +1572,8 @@ span[style*="background-color: rgb(14, 90, 138);"] {
   background-color: #2b26409c;
 }
 
-/* Block ref format to be more subtle with just side borders */
-  /* Here is all of Abhay code related to block-ref */
+/* *Block ref format to be more subtle with just side borders */
+  /* !Here is all of Abhay code related to block-ref */
     /*
     .rm-block-ref dont-focus-block {
       font-size: var(--main-font-size) !important;
@@ -1617,7 +1617,7 @@ span[style*="background-color: rgb(14, 90, 138);"] {
     */
   /* END of abhay code on block refs */
 
-/* !Commenting these out to hopefully remove. But need to see what it effects
+/* !Commenting these out to hopefully remove eventually. But need to see what it effects
 .rm-block-ref {
   color               : var(--block-reference-text) !important;
   border-bottom       : none !important;
@@ -1653,7 +1653,7 @@ span[style*="color: red"] {
   cursor: alias;
 }
 /* Limited this down to block refs excluding tables (weird attribute table issue where it adds attribute children blocks as block refs) */
-:not(td) > div > .rm-block-ref {
+.rm-block-ref.dont-focus-block {
   color               : var(--block-reference-text) !important;
   border-bottom       : none !important;
   border-right-color  : #9580ff !important;
@@ -1665,10 +1665,11 @@ span[style*="color: red"] {
   border-left-style   : groove !important;
   padding-left        : 5px !important;
 }
-:not(td) > div > .rm-block-ref:hover {
+.rm-block-ref.dont-focus-block:hover {
   background-color: var(--block-ref-hover-bg) !important;
   border-bottom: unset !important;
 }
+/** END OF block ref stuff */
 
 /* Rounded TODO checkboxes */
 .checkmark {
