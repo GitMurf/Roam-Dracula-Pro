@@ -346,9 +346,14 @@ a {
 
 /* Add emoji in front of external links
 HT: Can Sar */
+/* spm turning off as distracting
 .rm-alias-external:before {
   content: '🔗 ';
 }
+.rm-alias-external:after { *//* spm trying it after instead *//*
+  content: '🔗 ';
+}
+*/
 
 /* Internal Roam Links [[Roam]] & #Roam & #[[Roam]] */
 .bp3-text-overflow-ellipsis a,
