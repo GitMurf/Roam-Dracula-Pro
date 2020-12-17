@@ -1899,7 +1899,7 @@ Add " > div.rm-block-children > div:nth-child(n) " incrementally to each selecto
 }
 
 :root {
-    --box-shadow-values: 25px 0px 20px -30px; /* Set to "none" to remove shadow */
+    --box-shadow-values: none; /* Set to "none" to remove shadow */
     --indent1: #5F388BAD;
     --indent2: #4A57BAAD;
     --indent3: #48864DAD;
